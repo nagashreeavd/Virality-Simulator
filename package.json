@@ -1,0 +1,17 @@
+{
+  "name": "virality-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Predict how content spreads before you post it — an agent-based virality simulator.",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n server,client -c magenta,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "engine:demo": "node server/engine/demo.js",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
